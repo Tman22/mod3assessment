@@ -5,4 +5,9 @@ Rails.application.routes.draw do
 
   get 'legislators/:id/news', to: "legislators#show", as: "legislator"
 
+  # resources :legislators do
+  #   collection do
+  #     get '/:id/news', to: "legislator#show"
+  #   end
+  # end
 end

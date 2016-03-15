@@ -1,4 +1,7 @@
-<%= form_for :search, url: "/search" do |f| %>
-  <%= f.text_field :zipcode %>
-  <%= f.submit "Enter Zipcode" %>
+<div class="label">
+  <%= form_for :search, url: "/search" do |f| %>
+    <%= f.label "Zipcode" %>
+    <%= f.text_field :zipcode %>
+    <%= f.submit "Enter Zipcode" %>
   <% end %>
+</div>

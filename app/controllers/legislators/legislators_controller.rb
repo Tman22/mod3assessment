@@ -1,4 +1,4 @@
-class LegislatorsController < ApplicationController
+class Legislator::LegislatorsController < ApplicationController
 
   def show
     @legislator = Legislator.find(params[:id])
