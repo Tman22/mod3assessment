@@ -3,7 +3,7 @@ Rails.application.routes.draw do
 
   resources :search, only: [:create, :index]
 
-  namespace :legislators do
+  scope :legislators do
     get '/:id/news', to: "legislators#show"
   end
 

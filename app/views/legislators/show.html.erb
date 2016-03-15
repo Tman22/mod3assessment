@@ -1,1 +1,12 @@
 <h1>News for <%= @legislator.name %></h1>
+
+<% @news.each do |news| %>
+<ul>
+  <%= news[:title] %>
+  <li>Publisher: <%= news[:publisher] %></li>
+  <li>Url: <%= news[:url] %></li>
+  <% if !news[:related_title].nil? %>
+  <li>Related: <%= link_to news[:related_title], news[:related] %></li>
+  <% end %>
+</ul>
+<% end %>
