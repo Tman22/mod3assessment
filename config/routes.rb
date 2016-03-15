@@ -3,8 +3,6 @@ Rails.application.routes.draw do
 
   resources :search, only: [:create, :index]
 
-  scope :legislators do
-    get '/:id/news', to: "legislators#show"
-  end
+  get 'legislators/:id/news', to: "legislators#show"
 
 end

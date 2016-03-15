@@ -1,4 +1,4 @@
-class Legislators::LegislatorsController < ApplicationController
+class LegislatorsController < ApplicationController
 
   def show
     binding.pry

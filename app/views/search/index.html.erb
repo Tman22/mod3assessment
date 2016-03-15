@@ -5,7 +5,7 @@
     <% @results.each do |result| %>
     <li><%= link_to result.name, result.website %>(<%= result.party %>)
     <br>
-    <%= link_to "News", legislators_path(result.id)%>
+    <%= link_to "News", "/legislator/#{result.id}/news %>
     <br>
     </li>
     <% end %>
