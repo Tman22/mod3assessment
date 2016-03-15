@@ -3,8 +3,10 @@
 
   <ul>
     <% @results.each do |result| %>
-    <li><%= result.name %>(<%= result.party %>) <br>
-      <%= link_to result.website %>
+    <li><%= link_to result.name, result.website %>(<%= result.party %>)
+    <br>
+    <%= link_to "News", legislators_path(result.id)%>
+    <br>
     </li>
     <% end %>
   </ul>
