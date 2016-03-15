@@ -4,10 +4,9 @@ RSpec.describe "User can search by zipcode", :type => :feature do
   it "see's 3 counts " do
     visit '/'
 
-    save_and_open_page
       fill_in "Zipcode", with: "80203"
       click_on "Enter Zipcode"
-    
+
 
     expect(current_path).to eq '/search'
 
