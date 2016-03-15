@@ -11,17 +11,21 @@ class News
     articles = results[:responseData][:results]
     array = articles.map do |article|
       if !article[:relatedStories].nil?
-      { title: article[:title],
+      { title: format(article[:title]),
         publisher: article[:publisher],
         url: article[:unescapedUrl],
-        related_title: article[:relatedStories][0][:title],
+        related_title: format(article[:relatedStories][0][:title]),
         related: article[:relatedStories][0][:unescapedUrl] }
       else
-        { title: article[:title],
+        { title: format(article[:title]),
           publisher: article[:publisher],
           url: article[:unescapedUrl] }
       end
     end
+  end
+
+  def format(name)
+    name.gsub('<b>',"").gsub('</b>',"").gsub("&#39","")
   end
 
 end
