@@ -3,7 +3,9 @@
 
   <ul>
     <% @results.each do |result| %>
-    <li><%= result %></li>
+    <li><%= result.name %>(<%= result.party %>) <br>
+      <%= link_to result.website %>
+    </li>
     <% end %>
   </ul>
 
