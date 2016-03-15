@@ -12,6 +12,11 @@ gem 'figaro'
 gem "twitter-bootstrap-rails"
 gem "therubyracer"
 gem "less-rails"
+gem 'active_model_serializers', github: 'rails-api/active_model_serializers'
+gem "figaro"
+gem "responders"
+gem "faraday"
+
 
 group :development, :test do
   gem 'byebug'
@@ -23,5 +28,6 @@ end
 
 group :test do
   gem 'rspec-rails'
+  gem 'vcr'
+  gem 'webmock'
 end
-
