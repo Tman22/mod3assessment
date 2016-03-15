@@ -3,6 +3,6 @@ Rails.application.routes.draw do
 
   resources :search, only: [:create, :index]
 
-  get 'legislators/:id/news', to: "legislators#show"
+  get 'legislators/:id/news', to: "legislators#show", as: "legislator"
 
 end

@@ -1,8 +1,8 @@
 class LegislatorsController < ApplicationController
 
   def show
-    binding.pry
     @legislator = Legislator.find(params[:id])
+    binding.pry
     info = News.new(@legislator.name)
     @news = info.assortment
   end
